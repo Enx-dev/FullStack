@@ -1,12 +1,11 @@
 import React from "react";
+import Part from "./Part";
 
 function Content({ parts, exercises }) {
   return (
     <div>
       {parts.map((part, index) => (
-        <p key={index}>
-          {part} {exercises[index]}
-        </p>
+        <Part key={index} part={part} exercise={exercises[index]} />
       ))}
     </div>
   );
