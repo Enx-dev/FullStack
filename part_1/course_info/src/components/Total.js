@@ -1,10 +1,14 @@
 import React from "react";
 
-function Total({ exercises }) {
+function Total({ parts }) {
+  function Sum(a, b, c) {
+    return a + b + c;
+  }
   return (
     <div>
       <p>
-        Number of exercises: {exercises.reduce((curr, acc) => curr + acc, 0)}
+        Number of exercises:
+        {Sum(parts[0].exercises, parts[1].exercises, parts[2].exercises)}
       </p>
     </div>
   );
